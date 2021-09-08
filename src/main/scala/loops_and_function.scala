@@ -2,7 +2,7 @@ import scala.io.StdIn._
 // import java.util.Date
 import java.lang.String
 
-object scalaTutorials {
+object loops_and_function {
   // object Math {
   //   def divide(x: Int, y: Int) = x / y
   //   def **(x: Int) = x * x
@@ -42,25 +42,7 @@ object scalaTutorials {
     //   i * i * i
     // }
     // println(result)
-    // var age = 12
-    // age match {
-    //   case 12 => println("yes")
-    //   case 13 => println("no")
 
-    //   case _ => println("default")
-    // }
-    // val result = age match {
-    //   case 12 => "yes"
-    //   case 13 => "no"
-
-    //   case _ => "default"
-    // }
-    // println(result)
-    // val num = 7
-    // num match {
-    //   case 1|3|5|7|9 => println("odd")
-    //   case 2|4|6|8 => println("even")
-    // }
     // println(add(2, 4))
     // println(Math.divide(4, 2))
     // println(Math.**(5))
@@ -74,22 +56,6 @@ object scalaTutorials {
     // val date = new Date
     // val newLog= log(date, _:String)
     // newLog("Uzbekistan")
-
-    /*Sting*/
-    val str1 = "Hello Scala"
-    // val str2 = " World!"
-    // val num1 = 456
-    // val num2 = 321323.13123
-    // println(str1.length())
-    // println(str1.concat(str2))
-    // println(str1 + str2)
-    
-    // val result = printf("(%d -- %f -- %s)", num1, num2, str1)
-    // println(result)
-    // println("(%d -- %f -- %s)".format(num1, num2, str1))
-
-    // println(str1.hashCode())
-    println(str1.charAt(0))
 
   }
 }

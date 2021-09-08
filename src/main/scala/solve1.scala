@@ -1,5 +1,5 @@
 /*1 Quyidagi shartlar bajarilganda “rost”, aks holda “yolg‘on” qiymat qabul qiluvchi mantiqiy
-munosabat C++ tilida yozilsin: k butun soni 7 ga bo`linadi.
+munosabat yozilsin: k butun soni 7 ga bo`linadi.
  */
 import scala.io.StdIn._
 

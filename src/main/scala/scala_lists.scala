@@ -4,6 +4,7 @@
 /* Immutable - means don't change one assigned value */
 object scala_lists {
   val item: List[Int] = List(1, 2, 3, 23, 2, 423, 3)
+  val itemClone: List[Int] = List(1, 231, 32, 23, 21, 423, 3)
   val item2: List[String] = List("423", "hello", "tom", "mark")
   val item3: List[Boolean] = List(true, false, true, true)
   val item4: List[Double] = List(1.2123, 2.1556, 3.6)
@@ -22,6 +23,7 @@ object scala_lists {
     println(item.reverse)
     println(item.sorted)
     println(item.sum)
+    println(item.intersect(itemClone))
     val item5 = List.fill(5)(3)
 //                        |  |
 //                   repeat  argument

@@ -1,27 +1,33 @@
-/*Sets vs Lists*/
-/*1. -> Set don't use duplicate element*/
-/*2. -> Set by default immutable*/
-/*3. -> Set change mutable mode*/
-object scala_sets {
-  val aa: Set[Int] = Set(1,24,5,21,51,31,1) //Immutable set
-  val ac: Set[Int] = Set(12,2,5,19,56,43,7) //Immutable set
-  var ab: scala.collection.mutable.Set[Int] = scala.collection.mutable.Set(1,24,54,21548,451,321,1) //Immutable set
-  def main(args: Array[String]): Unit = {
-    println(aa)
-    println(ab)
-    println(aa + 15 + 48)
-    println(aa(21)) //Check contains element yes or not
-    println(aa.head)
-    println(aa.tail)
-    println(aa.isEmpty)
-    println(aa ++ ac)
-    println(aa.++(ac))
-    println(aa.&(ac)) //intersection {Kesishma}
-    println(aa.sum)
-    println(aa.max)
-    println(aa.min)
-    aa.foreach(println)
+/*Maps*/
+/*1. -> Contains key value pairs*/
+/*2. -> The same as Python dict*/
+object scala_Maps {
+  val map1: Map[Int, String] = Map(201 -> "Mark", 202 -> "Tom", 203 -> "Jack")
+  val map2: Map[Int, String] = Map(204 -> "Mark2", 205 -> "Tom2", 206 -> "Jack2")
 
-    for (item <- aa) print(s"$item ")
+  //                                |        |
+  //                               key     value
+  def main(args: Array[String]): Unit = {
+    println(map1)
+    //    Get one value in Map
+    println(map1(201))
+    //    Get all keys in Map
+    println(map1.keys) // return Set contains Map keys
+    //  Get all values in Map
+    println(map1.values) // return Iterable contains Map values
+    println(map1.isEmpty)
+    //  Get all keys and values in Map
+    map1.keys.foreach { key =>
+      print(s"$key - ")
+      println(s"${map1(key)}")
+    }
+    //    Check key have or not
+    println(map1.contains(204))
+    // Concatenating two Map
+    println(map1 ++ map2)
+    println(map1.head)
+    println(map1.tail)
+    println(map1.size)
+
   }
 }

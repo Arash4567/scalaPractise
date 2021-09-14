@@ -12,9 +12,9 @@ object scala_map_and_filter {
     println("hello".map(_.toUpper))
     println(List(List(1, 2, 3), List(4, 5, 6, 7)).flatten)
     println(list.flatMap(x => List(x, x + 1)))
-    println(list.map(x => List(x, x + 1)))
+    println(list.map(x => List(x, x + 1))) //return List
     //    filter
-    println(list.filter(x => x % 2 == 0))
-    println(list.filter(x => x % 2 != 0))
+    println(list.filter(x => x % 2 == 0)) //return List
+    println(list.filter(x => x % 2 != 0)) //return List
   }
 }

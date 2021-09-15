@@ -1,4 +1,8 @@
 /*Currying*/
+/*Currying transforms a function that takes multiple parameters into a chain of functions,
+each taking a single parameter. Curried functions are defined with multiple parameter lists*/
+/*URL: https://www.tutorialspoint.com/scala/currying_functions.htm
+* https://www.baeldung.com/scala/currying*/
 object currying_function {
 //  Normal function
   def add(x: Int, y: Int): Int = x + y

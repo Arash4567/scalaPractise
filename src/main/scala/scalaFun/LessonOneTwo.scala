@@ -11,7 +11,7 @@ import scala.io.StdIn
 object LessonOne extends App {
   println("Hello Scala!")
 }*/
-object LessonOne extends App {
+object LessonOneTwo extends App {
   //  Scala PrimitiveTypes
   /* |__________Type_________|_____Limit and Values_____|__________Info___________|
   *  | 1. Byte               | -127 to 128              | AnyVal                  |

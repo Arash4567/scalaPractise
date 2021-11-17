@@ -24,8 +24,8 @@ object scala_arrays {
     //    for (j <- arr5) println(j) //Automatic fill false if array type Boolean
     for (j <- arr6) print(s"$j ")
     /*Merge two array*/
-    val result: Array[Int] = concat(arr6, arr)
-    println(result)
+    val result: Array[Int] = Array.concat(arr6, arr)
+    println(result.mkString("Array(", ", ", ")"))
     for (j <- result) print(s"$j ")
   }
 }

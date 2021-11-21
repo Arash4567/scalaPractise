@@ -146,4 +146,7 @@ object LessonThree extends App {
   class GreetingTakomillashgan(lang: String = "O'zbek") {
     def printHello(username: String): Unit = ???
   }
+  abstract class GreetingTakomillashgan2(lang: String = "O'zbek") {
+    def printHello(username: String): Unit
+  }
 }

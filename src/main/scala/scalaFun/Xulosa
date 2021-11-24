@@ -1,49 +1,52 @@
-Class (Sinf) -> o`zgaruvchilar (variablelar (var)), qiymati o`zgarmas o`zgaruvchilarlar (value (val)) hamda
-ma`lum bir vazifa bajaruvchi kod bloklari (methodlar (def)) lar majmuasi (kolleksiyasi).
-Object (Obyekt) -> Classlarning namunasi (examplyari (instance)) hisoblanadi. Ko`z bilan ko`rib qo`l bilan tutib
-biladovin ixtiyoriy narsa!
+Sinf -> o`zgaruvchilar, qiymati o`zgarmas o`zgaruvchilarlar hamda ma`lum bir vazifa bajaruvchi kod 
+bloklari ya'ni metodlar to`plamidir. 
+Obyekt -> Sinflarning namunasi hisoblanadi. Ko`z bilan ko`rib, qo`l bilan ushlab bo`ladigan ixtiyoriy 
+narsa yoki buyumni obyekt deb tushunish mumkin.
 
-Class bilan Object larni farqi Classlarni bir mashinani qurish instruksiyasi dab qarasak,
-Objectlarni shu instruksiya yordamida yaratilgan avtomobil dab tushunish mumkin.
+Sinf bilan Obyektlarni farqi: Sinflarni biror bir mashinani ishlab chiqish loyihasi deb qarasak,
+Obyektlarni esa shu loyiha yordamida yaratilgan avtomobil deb tushunish mumkin.
 
-Classlar parametr oladi, objectlarda asa parametr olmidi!
+Classlar parameter oladi, objectlarda asa parameter olmidi!
 
-Classni (Sinf) namunasi (instance) new kalit so`zi bilan yasaladi
--> Class
+Sinf namunasi (instance) new kalit so`zi yordamida yaratiladi.
+-> Sinf
 class Follower(login: String, password: String){
     def thankYou(username: String): Unit = println(s"Xush kelibsiz, $username, Tashrifingizdan minnatdormiz!")
 }
--> Class namunasi (instance)
+-> Sinf namunasi (instance)
 val newFollower1 = new Follower("jack0777", "noP@ssword4567")
 
-Classdagi polyalarga (fieldlarga) murojaat qilish uchun uni oldin namunasini (instanceni) yaratib olishimiz garak
+Sinfdagi maydonlarga murojaat qilish uchun uni oldin namunasi (instance)ni yaratib olishimiz kerak bo`ladi.
 val newFollower2 = new Follower("mark0999", "noP@ssword1234")
-Keyin namuna (instance) objectdagi ixtiyoriy polya (field) ni "." (nuqta) bilan murojaat qilsak bo`ladi
+Keyin sinf namuna (instance)sidagi ya'ni, obyektidagi ixtiyoriy maydonga "." (nuqta) bilan murojaat qilish mumkin 
+bo`ladi
 newFollower2.thankYou("Mark")
-Yuqoridagi Class (Sinf) da bizar login va password dagan parametrlarni e'lon qildik, lekin bularni bizar uni namunasi
-(isntance) bo`lgan newFollower1 va newFolloer2 da "." (nuqta) bilan chaqirib bilmimiz. Shu parametrlarni chaqirish
-uchun bizar vu parametrlarni var yoki val kalit so`zlari bilan ifodalashimiz garak adi.
--> Class
+Yuqoridagi sinfda biz login va password degan parameterlarni e'lon qilgan edik, lekin ularni biz sinf namunasi
+(isntance) bo`lgan newFollower1 va newFolloer2 da "." (nuqta) yordamida, maydonlarga ya`ni, sinf a`zolariga murojaat
+qila olmaymiz. Biz shu parameterlarga murojaat qilishimiz uchun o`sha parameterlarni var yoki val kalit so`zlari
+bilan yaratishimiz kerak edi.
+-> Sinf
 class Follower(login: String, password: String){
     def thankYou(username: String): Unit = println(s"Xush kelibsiz, $username, Tashrifingizdan minnatdormiz!")
 }
--> Class namunasi (instance)
+-> Sinf namunasi (instance)
 val newFollower3 = new Follower("jack0777", "noP@ssword4567")
 
 println(newFollower3.login)
 println(newFollower3.password)
 
-Class (Sinf) larda polyalar (fieldlar) 3 xil go`rinishda e`lon qilinadi
-1. public -> Scalada bundin zaxiralangan so`z yo`q, ya`ni public method yoki o`zgaruvchilarni do`g`ridan do`g`ri e`lon
-qilamiz: Masalan:
+Sinflarda maydonlarni ya'ni sinf a`zolarini 3 xil ko`rinishda e`lon qilishimiz mumkin. Bular:
+1. public -> Scalada bunday zaxiralangan so`z yo`q, ya`ni public metodisiz o`zgaruvchilarni to`g`ridan to`g`ri e`lon
+qilamiz. Masalan:
 class Follower(login: String, password: String){
     def thankYou(username: String): Unit = println(s"Xush kelibsiz, $username, Tashrifingizdan minnatdormiz!")
 }
--> Berda thankYou() metodi public qilib e`lon qilindi
-bu polyaga ya'ni, metodga bizar Follow sinfini namunasi (instance) da "." (nuqta) bilan murajaat qilib bilamiz. Sinfdagi
-bu polyaga bizar uning ixtiyoriy namunasi (instance) da ruxsat (access) olib bilamiz.
-2. private -> Shaxsiy val yoki def. Bizar private kalit so`zi bilan e`lon qilingan val yoki deflarga shu faqat Sinf
-ichidagi polyalardan va hamroh obyektlardan (Companion Object) ruxsat olib bilamiz.
+-> Bu yerda thankYou() metodini public qilib e`lon qildik.
+Bu maydonga ya'ni, metodga biz Follow sinfining namunasi (instance) da "." (nuqta) bilan murajaat qila olmaymiz.
+Sinfdagi bu maydonga biz uning ixtiyoriy sinf namunasi (instance) da ruxsat (access) olishimiz mumkin.
+2. private -> Shaxsiy sinf a`zolari. Biz private kalit so`zi bilan e`lon qilingan sinf a`zolariga faqat Sinf
+ichidagi maydonlardan yoki hamroh obyektlardan (Companion Object) ruxsat olishimiz mumkin.
+ADD COMPANION OBJECT INFO
 
 class Follower {
     private val secretKey: String = "jhsaoihwaejbHJKHhdajksldhkjqweq313"
@@ -51,7 +54,7 @@ class Follower {
     def showSecretKey(username: String): Unit = println(s"Sizning maxsus kodingiz: $secretKey")
 }
 
-Hamroh objyekt (Companion object)
+Hamroh obyekt (Companion object)
 class Test {
     private val login:String = "jack2345"
 }
@@ -60,8 +63,10 @@ object Test {
 }
 Test.printLogin()
 
-3. protected -> Ximoyalangan polyalar (fieldlar) var, val yoki def.
-Ximoyalangan polyalardan faqat Follower sinfi (class) ning subclassi da foydalanish mumkin
+3. protected -> Himoyalangan sinf maydonlaridan ya'ni, a`zolaridan Follower sinfining ichki sinf (subclass) larida
+a`zolarga murojaat qilish va ushbu a`zolarni qayta e`lon qilish mumkin va shu bilan birga foydalanish Follower
+sinfining hamroh obyekti (companion object) dan turib murojaat qilish ham mumkin.
+ADD ME MORE Info
 
 class Follower(){
     private val secretKey: String = "jhsaoihwaejbHJKHhdajksldhkjqweq313"

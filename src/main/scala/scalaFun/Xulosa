@@ -143,7 +143,6 @@ Test.printLogin()
 3. protected -> Himoyalangan sinf maydonlaridan ya'ni, a`zolaridan Follower sinfining ichki sinf (subclass) larida
 a`zolarga murojaat qilish va ushbu a`zolarni qayta e`lon qilish mumkin va shu bilan birga foydalanish Follower
 sinfining hamroh obyekti (companion object) dan turib murojaat qilish ham mumkin.
-ADD ME MORE Info
 
 class Follower(){
     private val secretKey: String = "jhsaoihwaejbHJKHhdajksldhkjqweq313"

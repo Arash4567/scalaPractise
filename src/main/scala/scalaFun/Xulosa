@@ -1,12 +1,82 @@
 Sinf -> o`zgaruvchilar, qiymati o`zgarmas o`zgaruvchilarlar hamda ma`lum bir vazifa bajaruvchi kod 
-bloklari ya'ni metodlar to`plamidir. 
-Obyekt -> Sinflarning namunasi hisoblanadi. Ko`z bilan ko`rib, qo`l bilan ushlab bo`ladigan ixtiyoriy 
+bloklari ya'ni metodlar to`plamidir.
+
+Konstruktor - bu ma`lum bir sinfning namunasini ya`ni obyektini yaratuvchi metod yoki funksiya. Bu metodga murojaat
+qilish uchun xuddi sinfni namunasini yaratganimizdek new kalit so`zi yordamida murojaat qilamiz.
+class Apple(color: String, count: Int){
+    def printInfo(): Unit = println(s"Yashikda $count ta $color olma bor!")
+}
+Bu sinfning namunasini yanatishda biz new kalit so`zi bilan asosiy konstruktor Apple metodiga quyidagicha
+murojaat qilamiz:
+val yashik1 = new Apple("Qizil", 15)
+                    |
+         bu metod Asosiy (primary) konstruktor
+
+Yuqorida biz Sinf e'lon qilganimizda uni parameterlar bilan e'lon qildik. Biz shu sinfni parametersiz ifodalasak,
+uning asosiy konstruktorini ham () (Qavs)siz yoki qavs bilan murojaat qilgan bo`lar edik.
+class Orange {
+    def printInfo():Unit = println(s"Mandarin juda shirin meva hisoblanadi!")
+}
+Orange sinfining namunasi ya'ni obyektini e'lon qilamiz
+val orange1 = new Orange
+val orange2 = new Orange()
+
+Yordamchi konstruktorlar - bu asosiy konstruktorning qismlaridan tashkil topgan ikkinchi darajali konstruktorlardir.
+Ular sinf ichida this kalit so`zi yordamida e'lon qilinadi. Masalan:
+val defaultColor:String = "Qizil"
+val defaultCount:Int = 5
+class Apple(color: String, count: Int){
+   def this(color: String) = {
+     this(color, defaultCount)
+   }
+   def this(count: Int) = {
+     this(defaultColor, count)
+   }
+   def this() = {
+     this(defaultColor, defaultCount)
+   }
+   override def toString():String = s"Yashikda $count ta $color olma bor!"
+}
+
+Ikkinchi darajali konstruktorlarni e'lon qilish uchun quyidagi qoidalarga amal qilish lozim:
+1. Biz yaratayotgan har bir konstruktor bir biridan farq qilishi kerak
+2. Har bir konstruktor asosiy konstruktorga murojaat qilishi kerak
+
+Yordamchi konstruktorlar bizga parametr bilan berilgan sinfning namunalarini ya'ni obyektlarini turli ko`rinishlarda
+ya'ni asosiy konstruktorga bir argument bilan, bir nechta argument bilan hamda ummuman argument bermasdan yaratish
+imkonini beradi. Bunda biz bermagan argument sifatida oldindan belgilangan qiymatlarni oladi.
+
+Bir argument bergan holda Apple sinfining namumasi ya'ni obyektini yaratish:
+val apple1 = new Apple(45)
+bu holatda kod avtomatik sinfning ushbu qismiga tushadi:
+   ........
+   def this(count: Int) = {
+     this(defaultColor, count)
+   }
+   ........
+Bir nechta argument bergan holda Apple sinfining namumasi ya'ni obyektini yaratish:
+val apple2 = new Apple("Yashil", 45)
+bu holatda kod avtomatik sinfning ushbu qismiga tushadi:
+   ........
+   def this(color: String) = {
+     this(color, defaultCount)
+   }
+   ........
+Argument bermagan holda Apple sinfining namumasi ya'ni obyektini yaratish:
+val apple3 = new Apple()
+val apple4 = new Apple
+bu holatda kod avtomatik sinfning ushbu qismiga tushadi:
+   ........
+   def this() = {
+     this(defaultColor, defaultCount)
+   }
+   ........
+
+Obyekt -> Sinflarning namunasi hisoblanadi. Ko`z bilan ko`rib, qo`l bilan ushlab bo`ladigan ixtiyoriy
 narsa yoki buyumni obyekt deb tushunish mumkin.
 
 Sinf bilan Obyektlarni farqi: Sinflarni biror bir mashinani ishlab chiqish loyihasi deb qarasak,
 Obyektlarni esa shu loyiha yordamida yaratilgan avtomobil deb tushunish mumkin.
-
-Classlar parameter oladi, objectlarda asa parameter olmidi!
 
 Sinf namunasi (instance) new kalit so`zi yordamida yaratiladi.
 -> Sinf

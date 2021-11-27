@@ -78,6 +78,11 @@ narsa yoki buyumni obyekt deb tushunish mumkin.
 Sinf bilan Obyektlarni farqi: Sinflarni biror bir mashinani ishlab chiqish loyihasi deb qarasak,
 Obyektlarni esa shu loyiha yordamida yaratilgan avtomobil deb tushunish mumkin.
 
+Singleton obyekt - sinf (class) kalit so`zi o`rniga obyekt (object) kalit ishlatgan holda yaratiluvchi obyektdir.
+Bu obyekt bo`lgani uchun uning a`zolarini "." (nuqta) bilan chaqira olamiz. Sinflarda esa a`zolarga murojaat qilish
+uchun uning new kalit so`zi obyektini yaratishimiz kerak edi.
+
+Sinflar parameter oladi, Singleton obyektlar bo`lsa parameter qabul qilmaydi.
 Sinf namunasi (instance) new kalit so`zi yordamida yaratiladi.
 -> Sinf
 class Follower(login: String, password: String){
@@ -116,7 +121,9 @@ Bu maydonga ya'ni, metodga biz Follow sinfining namunasi (instance) da "." (nuqt
 Sinfdagi bu maydonga biz uning ixtiyoriy sinf namunasi (instance) da ruxsat (access) olishimiz mumkin.
 2. private -> Shaxsiy sinf a`zolari. Biz private kalit so`zi bilan e`lon qilingan sinf a`zolariga faqat Sinf
 ichidagi maydonlardan yoki hamroh obyektlardan (Companion Object) ruxsat olishimiz mumkin.
-ADD COMPANION OBJECT INFO
+
+Hamroh obyektlar (Companion Object) - bular sinf bilan bir faylda yaratilgan sinf nomi bilan bir xil nom
+bilan yaratilgan obyekt.
 
 class Follower {
     private val secretKey: String = "jhsaoihwaejbHJKHhdajksldhkjqweq313"

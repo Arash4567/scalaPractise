@@ -126,20 +126,20 @@ object LessonFive extends App {
   val bike = new Car
   bike.canStart("Dugati")
   bike.canStop("Dugati")*/
-  //  class Start {
-  //    def canStart(car: String): Unit = println(s"$car yura oladi!")
-  //  }
-  //
-  //  class Stop {
-  //    def canStop(car: String): Unit = println(s"$car to`xtay oladi!")
-  //  }
-  //
-  //  class Car extends Start with Stop
-  //
-  //  val bike = new Car
-  //  bike.canStart("Dugati")
-  //  bike.canStop("Dugati")
-  //
+//    trait Start {
+//      def canStart(car: String): Unit = println(s"$car yura oladi!")
+//    }
+//
+//    trait Stop {
+//      def canStop(car: String): Unit = println(s"$car to`xtay oladi!")
+//    }
+//
+//    class Car extends Start with Stop
+//
+//    val bike = new Car
+//    bike.canStart("Dugati")
+//    bike.canStop("Dugati")
+
   //  trait TraitName {
   //    //    maydonlar
   //    //    metodlar
@@ -216,6 +216,6 @@ object LessonFive extends App {
   //  println(ccc.i)
   //  println(ccc.aa)
   //  println(ccc.i)
-
+  println(Option(List()).toList.flatten)
 
 }

@@ -10,7 +10,7 @@ object Lesson3 extends App {
 
   val tohir = Student("Tohir", 22, List("Frontend"))
   val akbar = Student("Akbar", 23, List("Backend"))
-  val shuxrat = Student("Shuxrat", 22, List("Frontend"))
+  val shuxrat = Student("Shuhrat", 22, List("Frontend"))
   val kamol = Student("Kamol", 22, List("Frontend"))
   val doniyor = Student("Doniyor", 22, List("Frontend"))
 

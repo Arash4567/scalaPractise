@@ -2,4 +2,9 @@
 /target
 /src/test
 /project/target
-
+/project/.bloop
+/project/project
+/project/metals.sbt
+.vscode
+.metals
+.bloop

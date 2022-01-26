@@ -12,10 +12,6 @@ println(summa(5, 4))
 val kvadrat1:Int => Int = (x:Int) => x * x
 val summa1:(Int, Int) => Int = (x:Int, y:Int) => x + y
 // Alternative
-val kvadrat2:Int => Int = (x:Int) => _ * _
-val summa2:(Int, Int) => Int = (x:Int, y:Int) => _ + _
-
-val sqr2:Int => Int = (x:Int) => _ * _
 val add2 = (_:Int) + (_:Int)
 
 // Function1 and Function2

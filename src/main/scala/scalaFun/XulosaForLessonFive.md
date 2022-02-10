@@ -1,0 +1,1 @@
+# https://deep-red-9c2.notion.site/Trait-ADT-Algebraic-Data-Type-and-case-class-db0159b7020d48acb38bcc7a025c8344

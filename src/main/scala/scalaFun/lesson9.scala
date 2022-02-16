@@ -77,7 +77,7 @@ object lesson9 extends App {
   /* SET */
   val set1 = Set(1, 213, 2, 3, 4, 4)
   val set2 = Set(1, 213, 2, 3, 4, 4)
-  val res = set1 + set2
+  val res: Set[Int] = set1 ++ set2
   println(res)
 
   val res2 = set1 + 5
